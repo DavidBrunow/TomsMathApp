@@ -13,6 +13,10 @@
 		23B77E091B6135CC002D1CB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23B77E081B6135CC002D1CB4 /* Images.xcassets */; };
 		23B77E0C1B6135CC002D1CB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B77E0A1B6135CC002D1CB4 /* LaunchScreen.xib */; };
 		23B77E181B6135CC002D1CB4 /* Tom_s_Math_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B77E171B6135CC002D1CB4 /* Tom_s_Math_AppTests.swift */; };
+		23B77E221B6138FA002D1CB4 /* TextWrappingExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B77E211B6138FA002D1CB4 /* TextWrappingExampleViewController.swift */; };
+		23B77E241B613A10002D1CB4 /* TextWrappingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B77E231B613A10002D1CB4 /* TextWrappingView.swift */; };
+		23C0593A1B61847400049044 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C059391B61847400049044 /* Problem.swift */; };
+		23C0593E1B618D7200049044 /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C0593D1B618D7200049044 /* ProblemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		23B77E111B6135CC002D1CB4 /* Tom's Math AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tom's Math AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B77E161B6135CC002D1CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23B77E171B6135CC002D1CB4 /* Tom_s_Math_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tom_s_Math_AppTests.swift; sourceTree = "<group>"; };
+		23B77E211B6138FA002D1CB4 /* TextWrappingExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWrappingExampleViewController.swift; sourceTree = "<group>"; };
+		23B77E231B613A10002D1CB4 /* TextWrappingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextWrappingView.swift; sourceTree = "<group>"; };
+		23C059391B61847400049044 /* Problem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem.swift; sourceTree = "<group>"; };
+		23C0593D1B618D7200049044 /* ProblemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProblemViewController.swift; path = "Tom's Math App/ProblemViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		23B77DF31B6135CC002D1CB4 = {
 			isa = PBXGroup;
 			children = (
+				23C0593D1B618D7200049044 /* ProblemViewController.swift */,
 				23B77DFE1B6135CC002D1CB4 /* Tom's Math App */,
 				23B77E141B6135CC002D1CB4 /* Tom's Math AppTests */,
 				23B77DFD1B6135CC002D1CB4 /* Products */,
@@ -78,11 +87,14 @@
 			isa = PBXGroup;
 			children = (
 				23B77E011B6135CC002D1CB4 /* AppDelegate.swift */,
+				23C059391B61847400049044 /* Problem.swift */,
 				23B77E031B6135CC002D1CB4 /* ViewController.swift */,
 				23B77E051B6135CC002D1CB4 /* Main.storyboard */,
 				23B77E081B6135CC002D1CB4 /* Images.xcassets */,
 				23B77E0A1B6135CC002D1CB4 /* LaunchScreen.xib */,
 				23B77DFF1B6135CC002D1CB4 /* Supporting Files */,
+				23B77E211B6138FA002D1CB4 /* TextWrappingExampleViewController.swift */,
+				23B77E231B613A10002D1CB4 /* TextWrappingView.swift */,
 			);
 			path = "Tom's Math App";
 			sourceTree = "<group>";
@@ -212,7 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B77E221B6138FA002D1CB4 /* TextWrappingExampleViewController.swift in Sources */,
+				23B77E241B613A10002D1CB4 /* TextWrappingView.swift in Sources */,
 				23B77E041B6135CC002D1CB4 /* ViewController.swift in Sources */,
+				23C0593A1B61847400049044 /* Problem.swift in Sources */,
+				23C0593E1B618D7200049044 /* ProblemViewController.swift in Sources */,
 				23B77E021B6135CC002D1CB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +359,7 @@
 				INFOPLIST_FILE = "Tom's Math App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -353,6 +370,7 @@
 				INFOPLIST_FILE = "Tom's Math App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -409,6 +427,7 @@
 				23B77E1D1B6135CC002D1CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23B77E1E1B6135CC002D1CB4 /* Build configuration list for PBXNativeTarget "Tom's Math AppTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +436,7 @@
 				23B77E201B6135CC002D1CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

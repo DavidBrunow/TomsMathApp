@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tom_s_Math_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,109 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ict-Il-lSv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hC-Cd-g25">
+                                <rect key="frame" x="246" y="562" width="108" height="30"/>
+                                <state key="normal" title="Show Problems">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B7z-eI-lkV" kind="presentation" id="b5x-O6-n88"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ict-Il-lSv" secondAttribute="centerX" id="2LW-5x-y6k"/>
+                            <constraint firstItem="ict-Il-lSv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9rN-GG-Qze"/>
+                            <constraint firstAttribute="centerX" secondItem="6hC-Cd-g25" secondAttribute="centerX" id="H22-gi-E8p"/>
+                            <constraint firstAttribute="centerY" secondItem="ict-Il-lSv" secondAttribute="centerY" id="KnA-y5-MFU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6hC-Cd-g25" secondAttribute="bottom" constant="8" symbolic="YES" id="Q3K-zx-Ec3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ict-Il-lSv" secondAttribute="bottom" id="S7K-k2-Ae4"/>
+                            <constraint firstItem="ict-Il-lSv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="Vmf-tP-Zun"/>
+                            <constraint firstItem="6hC-Cd-g25" firstAttribute="top" secondItem="ict-Il-lSv" secondAttribute="bottom" constant="8" symbolic="YES" id="gC3-81-MYq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ict-Il-lSv" secondAttribute="trailing" constant="-16" id="lcU-NK-jAg"/>
+                            <constraint firstItem="ict-Il-lSv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="oCT-yO-UuZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KnA-y5-MFU"/>
+                                <exclude reference="Vmf-tP-Zun"/>
+                                <exclude reference="S7K-k2-Ae4"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="showProblemsButton" destination="6hC-Cd-g25" id="KYR-WZ-Wa4"/>
+                        <outlet property="tv" destination="ict-Il-lSv" id="HWj-Gr-gQI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="561" y="449"/>
+        </scene>
+        <!--Problem View Controller-->
+        <scene sceneID="jNe-aQ-DPE">
+            <objects>
+                <viewController id="B7z-eI-lkV" customClass="ProblemViewController" customModule="Tom_s_Math_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M9a-m1-DFE"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ui-gs-gZf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uxW-Lt-Zuw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-fz-TZi">
+                                <rect key="frame" x="16" y="265" width="568" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="64"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BWQ-fz-TZi" firstAttribute="trailing" secondItem="uxW-Lt-Zuw" secondAttribute="trailingMargin" id="N3L-LE-2iQ"/>
+                            <constraint firstItem="BWQ-fz-TZi" firstAttribute="leading" secondItem="uxW-Lt-Zuw" secondAttribute="leadingMargin" id="SJH-Ss-cru"/>
+                            <constraint firstAttribute="centerX" secondItem="BWQ-fz-TZi" secondAttribute="centerX" id="mvp-Dk-6ry"/>
+                            <constraint firstAttribute="centerY" secondItem="BWQ-fz-TZi" secondAttribute="centerY" id="n6j-09-QYf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="problemLabelFromStoryboard" destination="BWQ-fz-TZi" id="O2H-49-Vfp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILJ-k3-Dl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248" y="449"/>
+        </scene>
+        <!--Text Wrapping Example View Controller-->
+        <scene sceneID="o67-f1-8Fh">
+            <objects>
+                <viewController id="MZq-VB-bSR" customClass="TextWrappingExampleViewController" customModule="Tom_s_Math_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fq8-0D-suF"/>
+                        <viewControllerLayoutGuide type="bottom" id="FVO-g9-f2B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4VU-yV-mG9" customClass="TextWrappingView" customModule="Tom_s_Math_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textWrappingView" destination="4VU-yV-mG9" id="Afx-0N-bU3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcB-Sa-22J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2376" y="501"/>
         </scene>
     </scenes>
 </document>

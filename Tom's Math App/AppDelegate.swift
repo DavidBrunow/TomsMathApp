@@ -12,9 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var problems: [Problem] = []
+    var problemViewController: ProblemViewController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let problem = Problem()
+        
+        problem.equationType = "Addition"
+        problem.answerType = "Multiple Choice"
+        problem.numberOfAnswersToShow = 5
+    
+        
+        problems.append(problem)
+        
         // Override point for customization after application launch.
         return true
     }
